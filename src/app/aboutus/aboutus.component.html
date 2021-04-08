@@ -1,0 +1,39 @@
+<h1>
+    aboutus page
+</h1>
+{{name}}
+<div>
+    uppercase:{{name | uppercase}}
+</div>
+<div>
+    lowercase:{{name | lowercase}}
+</div>
+<div>
+    today:{{today | date}}
+</div>
+<div>
+    test:{{test | square}}
+</div>
+<hr>
+<br><br>
+
+<table class = "table">
+    <thead>
+        <th>ID</th>
+        <th>EMAIL</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>IMAGE</th>
+
+    </thead>
+    <tr *ngFor="let img of images">
+        <td>{{img.id}}</td>
+        <td>{{img.email}}</td>
+        <td>{{img.first_name}}</td>
+        <td>{{img.last_name}}</td>
+        <td><img [src] ="img.avatar" alt="noimage" ></td>
+
+    </tr>
+
+
+</table>
